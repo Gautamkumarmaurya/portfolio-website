@@ -65,7 +65,9 @@ const projects = [
     description: 'A responsive analytics dashboard with product, order and customer workflows designed for fast daily operations.',
     tags: ['React', 'Tailwind', 'REST API'],
     gradient: 'from-violet-500/30 via-cyan-400/10 to-transparent',
-    visual: 'dashboard'
+    visual: 'dashboard',
+    demoUrl: 'https://shopsphere-e-commerce-six.vercel.app/',
+    githubUrl: 'https://github.com/Gautamkumarmaurya/ShopSphere-E-Commerce'
   },
   {
     title: 'Admin Dashboard',
@@ -378,8 +380,8 @@ function App() {
                   <p>{project.description}</p>
                   <div className="tag-row">{project.tags.map(t => <span key={t}>{t}</span>)}</div>
                   <div className="project-links">
-                    <a href="#contact">Live Demo <ArrowUpRight size={14} /></a>
-                    <a href={GITHUB_URL} target="_blank" rel="noreferrer"><Github size={14} /> GitHub <ArrowUpRight size={14} /></a>
+                    <a href={project.demoUrl || '#contact'}>Live Demo <ArrowUpRight size={14} /></a>
+                    <a href={project.githubUrl || GITHUB_URL} target="_blank" rel="noreferrer"><Github size={14} /> GitHub <ArrowUpRight size={14} /></a>
                   </div>
                 </div>
               </motion.article>
